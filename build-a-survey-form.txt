@@ -1,0 +1,55 @@
+** start of undefined **
+
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+  <meta charset="utf_8">
+  </head>
+  <body>
+<H1 id="title">Free code camp survey form</H1>
+<P ID="description">thank you for helping us improve our coding</P>
+<form id="survey-form">
+  <fieldset>
+
+<div><label id="name-label" for="name">Name <input type="text"id="name"id="name-label"name="name" placeholder="your name"required> </label></div>
+<div><label id="email-label" for="email">Email <input type="email" id="email" name="email"placeholder="your email"required></label></div> 
+<div><label id="number-label" for="number">age (optional)<input type=number id="number" name="age" min="3" max="8" placeholder="your age" required></label></div>
+</fieldset>
+ <fieldset>
+   <label> what describe your current role
+  <select id="dropdown">
+    
+<option value="">select your role currently</option>
+<option value="1"> student </option>
+<option value ="2"> part timer</option>
+  </select>
+  </label>
+<div><label>Would your recommend free coding to your friend.</label></div>
+<div><label><input value="offcourse" type="radio" name="radio-group">offcourse</label></div>
+<div> <label ><input value="maybe" type="radio" name="radio-group">maybe</label></div>
+     <label ><input value="not at all"type="radio" name="radio-group">not at all</label>
+
+    <div> <label>Describe your experience during coding </label></div>
+    <div><label><input type="checkbox" value="quite boring">quite boring </label></div>
+<div><label><input type="checkbox" value="was fun to learn"> was fun to learn</label></div>
+<div><label><input type="checkbox" value="extremly hard wont try again"> extremly hard wont try again</label></div>
+<div><label><input type="checkbox" value="learned alot and was fun">learned alot and was fun</label></div>
+ </fieldset>
+   <fieldset>
+  <label>Would you like to recommend anything?</label>
+   <textarea></textarea>
+     </div>
+ </fieldset>
+ <input type="submit" id="submit" button="submit">
+  </form>
+  </body>
+  </html>
+
+** end of undefined **
+
+** start of undefined **
+
+
+
+** end of undefined **
+
