@@ -1,45 +1,132 @@
-<!DOCTYPE html>
-<html lang=en>
-<head>
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!--title--------------------------->
-<title> Blog section</title>
-<!--stylesheet---------------------->
-<link rel="stylesheet" href="css/style.css"/>
-<!--fav-icon------------------------>
-<!--poppins------------------------->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<html>
+	<head>
+		<title> Weeb </title>
+		<link rel="stylesheet" href= "index.css">
+		<style>
+			.body {
+				position: absolute;
+				top: 12%;
+				left: 50%;
+				width: 90%;
+				transform: translate(-50%, 0);
+				font-family: Arial;
+				color:rgba(0,33,71,255);
+				
+			}
+			.content {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+			}
+			
+			img {
+				width: 100%;
+			}
 
-</head>
-   
-    <div class="banner">South Asian Girl blogs</div>
+			h1 {
+				font-size: 80px;
+				margin: 0;
+				color:rgba(0,33,71,255);
+			}
 
-<body>
-<!--Navigation-->
-  <nav>
-       <img src="" alt="">
-       <div class="navigation">
-           <ul>
-               <li><a href="home.html">home</a></li>
-               <li><a href="my-blogs.html">my blogs</a></li>
-               <li><a href="about-me.html">about me</a></li>
-               <li><a href="contacts.html">contacts</a></li>
-           
-           </ul>
-       </div>
-</nav>
-  <!--home-->
-  <section id="home">
-      <h2>hello everyone welcome to my blog site.</h2>
-        <p>my name is Kriti Rai . I am 18 and am a student is KUSOM. I write my             blogs,views and ideas here. Please feel free to contact me if you need             help from me.</p>
-  </section>
+			.left-side {
+				display: flex;
+				flex-direction: column;
+				width: 45%;
+				margin-bottom: 120;
+			}
 
+			.right-side {
+				width: 45%;
+			}
 
-</body>
+			.right-side p {
+				color: rgba(0, 0, 0, 0.7);
+				text-align: center;
+			}
 
+			.title {
+				margin-bottom: 4rem;
+				text-align: center;
+				color:rgba(0,33,71,255);
+			}
 
+			.title p {
+				font-family: "Calibri";
+				font-weight: 700;
+				margin-top: 0;
+				margin-left: 0.4rem;
+			}
+			.add{
+				font-family: "Calibri";
+				font-weight: 700;
+				margin-top: 0;
+				margin-left: 0.4rem;
+				font-size: 30px;
+				margin:0;
+				color:rgba(0,33,71,255);
+			}
+			
+			
+		</style>
+	</head>
+	
+	<body>
+		<div class="nav-bar">
+			<a href= "index.html" class= "home">
+				
+				Home
+			</a>
+			
+			<a href= "entertainment.html">
+				<span> Entertainment  </span>
+			</a>
+			
+			<a href="travelParking.html">
+				<span> Travel And Parking </span>
+			</a>
+			
+			<a href="meeting.html">
+				<span> Fun and Games </span>
+			</a>
+			
+		</div>
+
+		<div class="body">
+			<div class="title">
+				<h1> St. Xavier's College</h1>
+				<p class="add">Maitighar, Kathmandu</p>
+				<p> "Dedicated to Excellence, Leadership, Service"</p>
+			</div>
+	
+			<div class="content">
+				<div class="left-side">
+					<div class= "agm">
+						<h2> BIM (TU) </h2>
+						
+						<p>
+							Tribhuvan University's Bachelor of Information Management (BIM) degree is a four-year (eight-semester) program that combines IT and management courses. This course is designed to help students build information technology skills while also teaching them how to grasp professional competence when in decision-making positions.
+						</p>
+						
+						<p>
+							In order to assess, configure, and use information systems, information management entails the development and use of theories, ideas, models, methodologies, and tools.
+							
+							
+						</p>
+						
+					</div>
+	
+					<div class="about-us">
+						<h2> About us</h2>
+						<p> ST. XAVIER’S COLLEGE, Kathmandu, is an educational institution of higher learning established and managed by the Nepal Jesuit Society. Check out <a href="meeting.html"> Meeting Timings </a> for more information.</p>
+					</div>
+	
+				</div>
+				<div class="right-side">
+					<img src= "images/MainB.jpg" alt= "La Trobe University" />
+					<p>St. Xavier's College. Google Maps. Retrieved from <a href="https://www.google.com/maps/place/St.+Xavier's+College/@27.6933777,85.3209263,3a,75y,90t/data=!3m8!1e2!3m6!1sAF1QipM0leJcT7ETafslfWYq1wC_dz0KLxhRbtx0_8za!2e10!3e12!6shttps:%2F%2Flh5.googleusercontent.com%2Fp%2FAF1QipM0leJcT7ETafslfWYq1wC_dz0KLxhRbtx0_8za%3Dw114-h86-k-no!7i4000!8i3000!4m11!1m2!2m1!1sst+xavier!3m7!1s0x39eb19b032e93fc1:0x4a61dc499d928027!8m2!3d27.6933113!4d85.3211291!10e5!15sCglzdCB4YXZpZXKSAQdjb2xsZWdl4AEA!16zL20vMGg3dm44?entry=ttu" target="_blank"> link </a></p>
+				</div>
+			</div>
+		</div>
+	</body>
 </html>
