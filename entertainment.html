@@ -1,0 +1,148 @@
+<html>
+    <head>
+        <title> Entertainment </title>
+
+        <link rel="stylesheet" href="index.css"  />
+
+        <style>
+
+            body {
+                font-family: Arial;
+            }
+
+            .content img {
+                border: 4px solid rgb(54, 179, 54);
+                cursor: pointer;
+                transition: transform 1s;
+            }
+
+            .content img:hover {
+                transform: scale(1.1);
+            }
+
+            .content {
+                position: absolute;
+                left: 50%;
+                transform: translate(-50%, 0);
+                margin-top: 5rem;
+                width: 90%;
+            }
+
+            .title {
+                text-align: center;
+                color:rgba(0,33,71,255);
+            }
+
+            .title p {
+               margin-top: 12px;
+               color:rgba(0,33,71,255);
+            }
+
+            h1 {
+                margin-bottom: 0;
+                color:rgba(0,33,71,255);
+            }
+            h2{
+                color:rgba(0,33,71,255);
+            }
+            .subp{
+                color:rgba(0,33,71,255);               
+            }
+            .content-body {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .section {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                column-gap: 3.5rem;
+                text-align: center;
+            }
+
+            .section img {
+                width: 100%;
+                height: 38vh;
+                object-fit: cover;
+            }
+
+            .body-footer {
+                text-align: center;
+            }
+          
+            .image-sections {
+                display: flex;
+                column-gap: 4rem;
+                align-items: center;
+                margin: 1.3rem 0;
+                object-fit: cover;
+            }
+
+            .image-section {
+                height: 40vh;
+                width: 100%;
+            }
+
+            .image-section img {
+                height: 100%;
+                width: 100%;
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <div class="nav-bar">
+			<a href= "index.html" class= "home">
+				
+				Home
+			</a>
+			
+			<a href= "entertainment.html">
+				<span> Entertainment  </span>
+			</a>
+			
+			<a href="travelParking.html">
+				<span> Travel And Parking </span>
+			</a>
+			
+			<a href="meeting.html">
+				<span> Fun and Games </span>
+			</a>
+			
+		</div>
+
+        <div class="content">
+            <div class="title">
+                <h1> We Provide Many Facilities in SXC </h1>
+                <p class="subp"> Facilities that we provide are:</p>
+            </div>
+            <div class="content-body">
+                <div class="section">
+                    <div class="section-left">
+                        <h2> Sports</h2>
+                        <a href="travelParking.html">
+                            <img src="images/Basket.jpg" alt="local art" />
+                        </a>
+                        <p class="subp"> There are many ways to enjoy sports in here like BasketBall, Table Tenis, Badminton, Etc.</p>
+                    </div>
+                    <div class="section-middle">
+                        <h2> Library</h2>
+                        <a href="travelParking.html">
+                            <img src="images/Library.jpg" alt="garden" />
+                        </a>
+                        <p class="subp"> There is a Library in SXC where you can Study peacefully.</p>
+                    </div>
+                    <div class="section-right">
+                        <h2> Canteen</h2>
+                        <a href="travelParking.html">
+                            <img src="images/Canteen.jpg" alt="modern art" />
+                        </a>
+                        <p class="subp"> You can also enjoy unique Foods in SXC.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

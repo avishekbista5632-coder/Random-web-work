@@ -1,0 +1,48 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+body {
+    background-color: rgb(255, 255, 255);
+    margin: 0;
+}
+
+.nav-bar {
+    display: flex;
+    height: 58px;
+    justify-content: space-around;
+    color: rgba(28, 28, 28, 1);
+    font-family: Courier New;
+    font-weight: 700;
+    font-size: 1.3rem;
+    background-color: rgb(1, 68, 163);
+    padding: 1rem 0;
+    text-transform: uppercase;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 3;
+}
+.nav-bar a {
+    transition: transform 0.14s;
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+}
+.nav-bar a:hover {
+    transform: scale(1.1);
+}
+.home {
+    height: 24px;
+    width: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-bar img {
+    height: 100%;
+    width: 40px;
+    margin-top: -2px;
+    fill: #fff;
+}
