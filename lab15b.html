@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <body style="font-family: Arial,
+     sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;">
+        <div >
+            <h2>New Student Details</h2>
+            <form >
+                <div>
+                    <label for="studentId">Student Roll No:</label>
+                    <input type="text" id="studentId" name="studentId" required>
+                </div>
+                <div>
+                    <label for="studentName">Name:</label>
+                    <input type="text" id="studentName" name="studentName" required>
+                </div>
+                <div >
+                    <label for="studentAddress">Address:</label>
+                    <input type="text" id="studentAddress" name="studentAddress" required>
+                </div>
+                <div>
+                    <label>Gender:</label>
+                    <input type="radio" id="male" name="gender" value="male" required>
+                    <label for="male">Male</label>
+                    <input type="radio" id="female" name="gender" value="female" required>
+                    <label for="female">Female</label>
+                </div>
+                <div >
+                    <label for="dob">Date of Birth:</label>
+                    <input type="date" id="dob" name="dob" required>
+                </div>
+                <div >
+                    <label for="transport">Means of Transport:</label>
+                    <select id="transport" name="transport" required>
+                        <option value="bus">Bus</option>
+                        <option value="car">Car</option>
+                        <option value="bike">Bike</option>
+                        <option value="walk">Walk</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="additionalDetails">Additional Details:</label>
+                    <textarea id="additionalDetails" name="additionalDetails" rows="4"></textarea>
+                </div>
+                <div>
+                    <input type="submit" value="Save">
+                    <input type="button" value="Cancel">
+                    <input type="reset" value="Reset">
+                </div>
+            </form>
+        </div>
+    
+    </body>
+</html>
