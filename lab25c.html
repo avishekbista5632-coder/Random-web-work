@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Middle of Three</title>
+  <script>
+    function findMiddle() {
+      var num1 = parseInt(prompt("Enter the first number:"));
+      var num2 = parseInt(prompt("Enter the second number:"));
+      var num3 = parseInt(prompt("Enter the third number:"));
+      var middle = num1;
+      if ((num2 <= num1 && num1 <= num3) || (num3 <= num1 && num1 <= num2)) {
+        middle = num1;
+      } else if ((num1 <= num2 && num2 <= num3) || (num3 <= num2 && num2 <= num1)) {
+        middle = num2;
+      } else {
+        middle = num3;
+      }
+      alert("The middle number is: " + middle);
+    }
+  </script>
+</head>
+<body>
+  <button onclick="findMiddle()">Find Middle</button>
+</body>
+</html>
