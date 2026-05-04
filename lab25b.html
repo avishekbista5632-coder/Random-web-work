@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Smaller of Two</title>
+  <script>
+    function findSmaller() {
+      var num1 = parseInt(prompt("Enter the first number:"));
+      var num2 = parseInt(prompt("Enter the second number:"));
+      var smaller = (num1 < num2) ? num1 : num2;
+      alert("The smaller number is: " + smaller);
+    }
+  </script>
+</head>
+<body>
+  <button onclick="findSmaller()">Find Smaller</button>
+</body>
+</html>
