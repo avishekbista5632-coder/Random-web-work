@@ -1,0 +1,13 @@
+// Program to check if a character is vowel or consonant
+function checkVowelOrConsonant(char) {
+    let vowels = ['a', 'e', 'i', 'o', 'u'];
+    if (vowels.includes(char.toLowerCase())) {
+        return "Vowel";
+    } else {
+        return "Consonant";
+    }
+}
+
+// Example usage:
+let character = prompt("Enter a character:");
+console.log("Character type:", checkVowelOrConsonant(character));
