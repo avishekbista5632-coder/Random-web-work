@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Middle of Three</title>
+  <script>
+function checkVotingEligibility() {
+    var age = parseInt(document.getElementById("age").value);
+    var resultElement = document.getElementById("result");
+
+    if (age >= 18) {
+        resultElement.textContent = "You are eligible to vote.";
+    } else {
+        resultElement.textContent = "You are not eligible to vote yet.";
+    }
+}
+
+  </script>
+</head>
+<body>
+  <button onclick="checkVotingEligibility()">Find Middle</button>
+</body>
+</html>
