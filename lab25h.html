@@ -1,0 +1,19 @@
+
+function isTrianglePossible(side1, side2, side3) {
+    if (side1 + side2 > side3 && side1 + side3 > side2 && side2 + side3 > side1) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+
+let side1 = parseFloat(prompt("Enter the length of side 1:"));
+let side2 = parseFloat(prompt("Enter the length of side 2:"));
+let side3 = parseFloat(prompt("Enter the length of side 3:"));
+
+if (isTrianglePossible(side1, side2, side3)) {
+    console.log("Triangle can be formed with the given sides.");
+} else {
+    console.log("Triangle cannot be formed with the given sides.");
+}
