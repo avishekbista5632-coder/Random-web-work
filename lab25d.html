@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <script>
+function findNumbers(num1, num2, num3) {
+    let numbers = [num1, num2, num3];
+    numbers.sort((a, b) => a - b);
+    let smallest = numbers[0];
+    let middle = numbers[1];
+    let greatest = numbers[2];
+    console.log("Smallest number:", smallest);
+    console.log("Middle number:", middle);
+    console.log("Greatest number:", greatest);
+}
+  </script>
+</head>
+<body>
+  <button onclick="findNumbers()">button</button>
+</body>
+</html>
