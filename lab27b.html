@@ -1,0 +1,29 @@
+// Function without parameters
+function averageWithoutParams() {
+    let num1 = 10, num2 = 20, num3 = 30;
+    let average = (num1 + num2 + num3) / 3;
+    console.log("Average:", average);
+}
+
+// Function with parameters and non-returning values
+function averageWithParams(num1, num2, num3) {
+    let average = (num1 + num2 + num3) / 3;
+    console.log("Average:", average);
+}
+
+// Function with parameters and returning values
+function averageWithReturn(num1, num2, num3) {
+    let average = (num1 + num2 + num3) / 3;
+    return average;
+}
+
+// Calling the functions
+console.log("Average without parameters:");
+averageWithoutParams();
+
+console.log("Average with parameters and non-returning values:");
+averageWithParams(10, 20, 30);
+
+console.log("Average with parameters and returning values:");
+let result = averageWithReturn(10, 20, 30);
+console.log("Returned average:", result);
