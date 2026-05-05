@@ -1,0 +1,82 @@
+a
+let num1 = parseFloat(prompt("Enter the first number:"));
+let num2 = parseFloat(prompt("Enter the second number:"));
+let sum = num1 + num2;
+console.log("The sum of", num1, "and", num2, "is:", sum);
+
+b
+let instruments = ["murchunga", "madal", "sarangi"];
+let instrumentsString = instruments.join(", ");
+console.log("Musical instruments:", instrumentsString);
+
+c
+function checkPassword(password, confirmPassword) {
+    if (password === confirmPassword) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+d
+let date1 = new Date(prompt("Enter the first date (YYYY-MM-DD):"));
+let date2 = new Date(prompt("Enter the second date (YYYY-MM-DD):"));
+let differenceInMilliseconds = Math.abs(date2 - date1);
+let differenceInDays = Math.ceil(differenceInMilliseconds / (1000 * 60 * 60 * 24));
+console.log("Difference in days:", differenceInDays);
+
+e
+function compareStrings(str1, str2) {
+    if (str1 === str2) {
+        return str1.toUpperCase();
+    } else {
+        return "The two strings do not match";
+    }
+}
+ f
+ function isPrime(num) {
+    if (num <= 1) return false;
+    for (let i = 2; i <= Math.sqrt(num); i++) {
+        if (num % i === 0) return false;
+    }
+    return true;
+}
+
+function addTwoPrimes() {
+    let sum = 0;
+    let count = 0;
+    let num = 2;
+    while (count < 2) {
+        if (isPrime(num)) {
+            sum += num;
+            count++;
+        }
+        num++;
+    }
+    console.log("Sum of two prime numbers:", sum);
+}
+
+g 
+function checkSquare(length, breadth) {
+    if (length === breadth) {
+        return "The object is square";
+    } else {
+        return "The object is rectangle";
+    }
+}
+
+h 
+function addOddNumbers(list) {
+    let sum = 0;
+    for (let num of list) {
+        if (num % 2 !== 0) {
+            sum += num;
+        }
+    }
+    return sum;
+}
+
+i
+function reverseString(str) {
+    return str.split("").reverse().join("");
+}
