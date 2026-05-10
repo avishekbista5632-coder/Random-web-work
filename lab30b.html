@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Light Bulb</title>
+</head>
+<body>
+<img id="bulb" src="white_bulb.jpg" alt="White Bulb">
+<button onclick="turnOnLight()">Turn On the Light</button>
+<button onclick="turnOffLight()">Turn Off the Light</button>
+
+<script>
+function turnOnLight() {
+    document.getElementById("bulb").src = "yellow_bulb.jpg";
+}
+
+function turnOffLight() {
+    document.getElementById("bulb").src = "white_bulb.jpg";
+}
+</script>
+</body>
+</html>

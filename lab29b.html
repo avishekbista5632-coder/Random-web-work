@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Modify Elements</title>
+</head>
+<body>
+<p id="paragraph1">Paragraph One</p>
+<p id="paragraph2">Paragraph Two</p>
+<p id="paragraph3"></p>
+<button onclick="addNewContent()">Add New Element</button>
+<button onclick="addElement()">Add Element</button>
+<button onclick="deleteContent('paragraph1')">Delete Content 1</button>
+<button onclick="deleteContent('paragraph2')">Delete Content 2</button>
+<button onclick="deleteContent('paragraph3')">Delete Content 3</button>
+<script>
+function addNewContent() {
+    document.getElementById("paragraph1").innerHTML = "New Content for Paragraph One";
+    document.getElementById("paragraph2").innerHTML = "New Content for Paragraph Two";
+}
+function addElement() {
+    let content1 = document.getElementById("paragraph1").innerHTML;
+    let content2 = document.getElementById("paragraph2").innerHTML;
+    document.getElementById("paragraph3").innerHTML = content1 + "<br>" + content2;
+}
+function deleteContent(id) {
+    document.getElementById(id).innerHTML = "";
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Image Replacement</title>
+</head>
+<body>
+<img id="image" src="default_image.jpg" alt="Default Image" onmouseover="changeImage()" onmouseout="defaultImage()">
+
+<script>
+function changeImage() {
+    document.getElementById("image").src = "new_image.jpg";
+}
+
+function defaultImage() {
+    document.getElementById("image").src = "default_image.jpg";
+}
+</script>
+</body>
+</html>
