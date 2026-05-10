@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Change Style</title>
+</head>
+<body>
+<h1 id="heading1">Heading 1</h1> 
+<h2 id="heading2">Heading 2</h2>
+<p class="paragraph">Paragraph 1</p>
+<p class="paragraph">Paragraph 2</p>
+<p class="paragraph">Paragraph 3</p>
+<p class="paragraph">Paragraph 4</p>
+<button onclick="changeStyleById()">Change style (getElementById)</button>
+<button onclick="changeStyleByClass()">Change style (getElementsByClassName)</button>
+<button onclick="changeStyleByTag()">Change style (getElementsByTagName)</button>
+
+<script>
+function changeStyleById() {
+    document.getElementById("heading1").style.color = "blue";
+    document.getElementById("heading2").style.backgroundColor = "yellow";
+}
+
+function changeStyleByClass() {
+    let paragraphs = document.getElementsByClassName("paragraph");
+    for (let i = 0; i < paragraphs.length; i++) {
+        paragraphs[i].style.fontStyle = "italic";
+    }
+}
+
+function changeStyleByTag() {
+    let paragraphs = document.getElementsByTagName("p");
+    for (let i = 0; i < paragraphs.length; i++) {
+        paragraphs[i].style.border = "1px solid red";
+    }
+}
+</script>
+</body>
+</html>
