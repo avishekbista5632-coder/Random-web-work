@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Add and Remove Elements</title>
+</head>
+<body>
+<h1 id="heading">This is a heading</h1>
+<p id="paragraph">This is a paragraph</p>
+<button onclick="addElement()">Add Element</button>
+<button onclick="removeElement()">Remove Element</button>
+
+<script>
+function addElement() {
+    // Create new elements
+    let newHeading = document.createElement("h2");
+    let newParagraph = document.createElement("p");
+    // Set content for new elements
+    newHeading.textContent = "New Heading";
+    newParagraph.textContent = "New Paragraph";
+    // Append new elements to the body
+    document.body.appendChild(newHeading);
+    document.body.appendChild(newParagraph);
+}
+
+function removeElement() {
+    // Remove last child elements from the body
+    document.body.lastChild.remove();
+    document.body.lastChild.remove();
+}
+</script>
+</body>
+</html>

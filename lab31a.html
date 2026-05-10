@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mouse Events</title>
+</head>
+<body>
+<button onclick="onClickEvent()">Click me</button>
+<button ondblclick="onDoubleClickEvent()">Double Click me</button>
+<button onmousedown="onMouseDownEvent()">Mouse Down</button>
+<button onmouseup="onMouseUpEvent()">Mouse Up</button>
+<button onmouseover="onMouseOverEvent()">Mouse Over</button>
+<button onmouseout="onMouseOutEvent()">Mouse Out</button>
+
+<script>
+function onClickEvent() {
+    alert("Button clicked!");
+}
+
+function onDoubleClickEvent() {
+    alert("Button double clicked!");
+}
+
+function onMouseDownEvent() {
+    console.log("Mouse down event occurred");
+}
+
+function onMouseUpEvent() {
+    console.log("Mouse up event occurred");
+}
+
+function onMouseOverEvent() {
+    console.log("Mouse over event occurred");
+}
+
+function onMouseOutEvent() {
+    console.log("Mouse out event occurred");
+}
+</script>
+</body>
+</html>

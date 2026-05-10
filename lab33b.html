@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login Form Validation</title>
+<style>
+.error {
+    color: red;
+}
+</style>
+</head>
+<body>
+<form onsubmit="return validateForm()">
+    <label for="username">Username:</label>
+    <input type="text" id="username"><br>
+    <label for="password">Password:</label>
+    <input type="password" id="password"><br>
+    <span id="usernameError" class="error"></span><br>
+    <span id="passwordError" class="error"></span><br>
+    <button type="submit">Submit</button>
+</form>
+
+<script>
+function validateForm() {
+    let username = document.getElementById("username").value;
+    let password = document.getElementById("password").value;
+    let usernameError = document.getElementById("usernameError");
+    let passwordError = document.getElementById("passwordError");
+    let isValid = true;
+
+    if (username === "") {
+        usernameError.textContent = "Please enter username";
+        isValid = false;
+    } else {
+        usernameError.textContent = "";
+    }
+
+    if (password === "") {
+        passwordError.textContent = "Please enter password";
+        isValid = false;
+    } else if (password.length < 8) {
+        passwordError.textContent = "Password must be at least 8 characters";
+        isValid = false;
+    } else {
+        passwordError.textContent = "";
+    }
+
+    return isValid;
+}
+</script>
+</body>
+</html>

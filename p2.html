@@ -1,49 +1,74 @@
-<html>
-    <style>
-        #d1{
-            height: 220px;
-            width:330px ;
-            font-size:small;
-            background-color: grey;
-            border:10px solid BLACK;
-            border-right-width: 40PX red;
-            border-radius: 20px;
-            padding-top:50px;
-            padding-right:40px;
-            padding-bottom:30px;
-            padding-left: 20px;
-            margin-left: 200px;
-        
-        }
-        #d1:hover{
-            height: 220px;
-            width:330px ;
-            font-size:larger;
-            color:green;
-            background-color: pink;
-            border:10px solid yellow;
-            border-right-width: 40PX red;
-            border-radius: 20px;
-            padding-top:50px;
-            padding-right:40px;
-            padding-bottom:30px;
-            padding-left: 20px;
-            margin-left: 200px;
-        
-        }
-        #d2{
-            height: 220px;
-            width:330px ;
-            background-color: orange;
-            border:10px dashed BLACK;
-            border-left-width:40px red;
-            padding:50px 40px 30px 20px;
-            margin:auto;
-        }
-        
-    </style>
-    <body>
-        <div id="d1">this id div one</div>
-        <div id="d2">this id div two</div>
-    </body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Multiplication Table</title>
+<style>
+    table {
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    th, td {
+        border: 1px solid black;
+        padding: 8px;
+        text-align: center;
+    }
+
+    th {
+        background-color: #f2f2f2;
+    }
+</style>
+</head>
+<body>
+
+<h2>Multiplication Table</h2>
+Enter a number: <input type="number" id="numberInput">
+<button onclick="generateTable()">Generate Table</button>
+
+<div id="tableContainer"></div>
+
+<script>
+function generateTable() {
+    var numberInput = document.getElementById("numberInput").value;
+    var tableContainer = document.getElementById("tableContainer");
+    
+    // Clear previous table
+    tableContainer.innerHTML = "";
+
+    // Create table element
+    var table = document.createElement("table");
+
+    // Create table header
+    var headerRow = document.createElement("tr");
+    var header1 = document.createElement("th");
+    header1.textContent = numberInput + " * 1";
+    headerRow.appendChild(header1);
+    var header2 = document.createElement("th");
+    header2.textContent = numberInput + " * 2";
+    headerRow.appendChild(header2);
+    var header3 = document.createElement("th");
+    header3.textContent = numberInput + " * 3";
+    headerRow.appendChild(header3);
+    var header4 = document.createElement("th");
+    header4.textContent = numberInput + " * 4";
+    headerRow.appendChild(header4);
+    table.appendChild(headerRow);
+
+    // Create table body
+    var bodyRow = document.createElement("tr");
+    for (var i = 1; i <= 4; i++) {
+        var cell = document.createElement("td");
+        cell.textContent = numberInput * i;
+        bodyRow.appendChild(cell);
+    }
+    table.appendChild(bodyRow);
+
+    // Append table to container
+    tableContainer.appendChild(table);
+}
+</script>
+
+</body>
 </html>

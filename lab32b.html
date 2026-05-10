@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Apply CSS Properties</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+<div id="content"> 
+    <h2>This is a heading</h2>
+    <p>This is a paragraph</p>
+</div>
+<button onclick="changeAttribute()">Change Attribute</button>
+
+<script>
+function changeAttribute() {
+    // Apply CSS properties stored externally
+    document.getElementById("content").style.color = "red";
+    document.getElementById("content").style.backgroundColor = "lightblue";
+}
+</script>
+</body>
+</html>

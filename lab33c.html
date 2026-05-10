@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Registration Form Validation</title>
+<style>
+.error {
+    color: red;
+}
+</style>
+</head>
+<body>
+<form onsubmit="return validateForm()">
+    <label for="name">Name:</label>
+    <input type="text" id="name"><br>
+    <label for="age">Age:</label>
+    <input type="number" id="age"><br>
+    <label for="gender">Gender:</label>
+    <select id="gender">
+        <option value="">Select</option>
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+    </select><br>
+    <label for="email">Email:</label>
+    <input type="email" id="email"><br>
+    <label for="countryCode">Country Code:</label>
+    <input type="text" id="countryCode"><br>
+    <label for="country">Country:</label>
+    <input type="text" id="country"><br>
+    <span id="nameError" class="error"></span><br>
+    <span id="ageError" class="error"></span><br>
+    <span id="genderError" class="error"></span><br>
+    <span id="emailError" class="error"></span><br>
+    <span id="countryCodeError" class="error"></span><br>
+    <span id="countryError" class="error"></span><br>
+    <button type="submit">Submit</button>
+    <button type="reset">Reset</button>
+</form>
+
+<script>
+function validateForm() {
+    let name = document.getElementById("name").value;
+    let age = document.getElementById("age").value;
+    let gender = document.getElementById("gender").value;
+    let email = document.getElementById("email").value;
+    let countryCode = document.getElementById("countryCode").value;
+    let country = document.getElementById("country").value;
+    let nameError = document.getElementById("nameError");
+    let ageError = document.getElementById("ageError");
+    let genderError = document.getElementById("genderError");
+    let emailError = document.getElementById("emailError");
+    let countryCodeError = document.getElementById("countryCodeError");
+    let countryError = document.getElementById("countryError");
+    let isValid = true;
+
+    if (name === "") {
+        nameError.textContent = "Please enter name";
+        isValid = false;
+    } else {
+        nameError.textContent = "";
+    }
+
+    if (age === "") {
+        ageError.textContent = "Please enter age";
+        isValid = false;
+    } else if (isNaN(age) || age <= 0) {
+        ageError.textContent = "Please enter a valid age";
+        isValid = false;
+    } else {
+        ageError.textContent = "";
+    }
+
+    if (gender === "") {
+        genderError.textContent = "Please select gender";
+        isValid = false;
+    } else {
+        genderError.textContent = "";
+    }
+
+    if (email === "") {
+        emailError.textContent = "Please enter email";
+        isValid = false;
+    } else {
+        emailError.textContent = "";
+    }
+
+    if (countryCode === "") {
+        countryCodeError.textContent = "Please enter country code";
+        isValid = false;
+    } else {
+        countryCodeError.textContent = "";
+    }
+
+    if (country === "") {
+        countryError.textContent = "Please enter country";
+        isValid = false;
+    } else {
+        countryError.textContent = "";
+    }
+
+    return isValid;
+}
+</script>
+</body>
+</html>

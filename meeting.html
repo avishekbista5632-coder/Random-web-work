@@ -1,0 +1,178 @@
+<html>
+	<head>
+		<title> Meeting Timings </title>
+		<link rel="stylesheet" href="index.css">
+		
+		<style>
+		
+			body {
+				margin-top: 6.5rem;
+				font-family: Arial;
+			}
+		
+			.content {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+			}			
+			body {
+				display: flex;
+				flex-direction: column;
+				align-items: left;
+				justify-content: left;
+				font-family: Arial, sans-serif;
+				margin: 0;
+				height: 100vh;
+				padding-left: 50px;
+				padding-top: 10px;
+				background-color: #f0f0f0;
+			}
+
+			h1 {
+				margin-bottom: 20px;
+			}
+			.game-board {
+				display: grid;
+				grid-template-columns: repeat(3, 100px);
+				grid-template-rows: repeat(3, 100px);
+				gap: 5px;
+			}
+			.cell {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				width: 100px;
+				height: 100px;
+				background-color: #fff;
+				border: 2px solid #000;
+				font-size: 24px;
+				cursor: pointer;
+			}
+			#restartButton {
+				margin-top: 10px;
+				width: 12vh;
+				padding: 10px 10px;
+				font-size: 16px;
+				cursor: pointer;
+				margin-left: 11vh;
+			}
+
+			
+		</style>
+	</head>
+	
+	<body>
+		<div class="nav-bar">
+			<a href= "index.html" class= "home">
+				
+				Home
+			</a>
+			
+			<a href= "entertainment.html">
+				<span> Entertainment  </span>
+			</a>
+			
+			<a href="travelParking.html">
+				<span> Travel And Parking </span>
+			</a>
+			
+			<a href="meeting.html">
+				<span> Fun and Games </span>
+			</a>
+			
+		</div>
+			
+		</div>
+		<br>
+		<br>
+		<br>
+		<h1>Tic Tac Toe</h1>
+			<div class="game-board" id="gameBoard">
+				<div class="cell" data-index="0"></div>
+				<div class="cell" data-index="1"></div>
+				<div class="cell" data-index="2"></div>
+				<div class="cell" data-index="3"></div>
+				<div class="cell" data-index="4"></div>
+				<div class="cell" data-index="5"></div>
+				<div class="cell" data-index="6"></div>
+				<div class="cell" data-index="7"></div>
+				<div class="cell" data-index="8"></div>
+			</div>
+    	<button id="restartButton">Restart Game</button>
+    <script>
+		document.addEventListener("DOMContentLoaded", () => {
+		const gameBoard = document.getElementById("gameBoard");
+		const cells = document.querySelectorAll(".cell");
+		const restartButton = document.getElementById("restartButton");
+		let currentPlayer = "X";
+		let gameActive = true;
+		let gameState = ["", "", "", "", "", "", "", "", ""];
+
+		const winningConditions = [
+			[0, 1, 2],
+			[3, 4, 5],
+			[6, 7, 8],
+			[0, 3, 6],
+			[1, 4, 7],
+			[2, 5, 8],
+			[0, 4, 8],
+			[2, 4, 6]
+		];
+
+		function handleCellClick(event) {
+			const clickedCell = event.target;
+			const clickedCellIndex = parseInt(clickedCell.getAttribute("data-index"));
+
+			if (gameState[clickedCellIndex] !== "" || !gameActive) {
+				return;
+			}
+
+			gameState[clickedCellIndex] = currentPlayer;
+			clickedCell.innerHTML = currentPlayer;
+
+			checkForWinner();
+			currentPlayer = currentPlayer === "X" ? "O" : "X";
+		}
+
+		function checkForWinner() {
+			let roundWon = false;
+			for (let i = 0; i < winningConditions.length; i++) {
+				const winCondition = winningConditions[i];
+				let a = gameState[winCondition[0]];
+				let b = gameState[winCondition[1]];
+				let c = gameState[winCondition[2]];
+				if (a === "" || b === "" || c === "") {
+					continue;
+				}
+				if (a === b && b === c) {
+					roundWon = true;
+					break;
+				}
+			}
+
+			if (roundWon) {
+				gameActive = false;
+				alert(`Player ${currentPlayer} has won!`);
+				return;
+			}
+
+			if (!gameState.includes("")) {
+				gameActive = false;
+				alert("It's a draw!");
+			}
+		}
+
+		function restartGame() {
+			gameActive = true;
+			currentPlayer = "X";
+			gameState = ["", "", "", "", "", "", "", "", ""];
+			cells.forEach(cell => cell.innerHTML = "");
+		}
+
+		cells.forEach(cell => cell.addEventListener("click", handleCellClick));
+		restartButton.addEventListener("click", restartGame);
+		});
+	</script>
+	</body>
+	
+</html>

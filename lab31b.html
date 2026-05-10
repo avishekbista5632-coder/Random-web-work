@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Window Events</title>
+</head>
+<body>
+<h1>Window Events</h1>
+
+<script>
+window.onload = function() {
+    alert("Window loaded!");
+};
+
+window.onunload = function() {
+    alert("Window unloaded!");
+};
+
+window.onresize = function() {
+    console.log("Window resized");
+};
+
+window.onerror = function() {
+    alert("An error occurred in the window!");
+};
+</script>
+</body>
+</html>
